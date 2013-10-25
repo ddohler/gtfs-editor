@@ -332,7 +332,7 @@ public class Api extends Controller {
                 else
             	   renderJSON(Api.toJson(Stop.find("majorStop = true").fetch(), false));
             }
-            else if (lat != null && lon != null) {
+/*            else if (lat != null && lon != null) {
             	//GeometryFactory geometryFactory = new GeometryFactory(new PrecisionModel(),4326);
             	//Geometry point  =  geometryFactory.createPoint(new Coordinate(lon,lat));
 
@@ -343,7 +343,7 @@ public class Api extends Controller {
                 else
                     renderJSON(Api.toJson(Stop.find("distance(location, geomfromtext(?, 4326)) < 0.025", point).fetch(), false));
             }
-            else {
+*/            else {
                 
                 if(agency != null)
                     renderJSON(Api.toJson(Stop.find("agency = ?", agency).fetch(), false));
